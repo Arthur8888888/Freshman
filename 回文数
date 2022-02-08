@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include <stdbool.h>
+
+bool isPalindrome(int); 
+
+int main(){
+	long x;
+	scanf("%d",&x);
+	isPalindrome(x);
+	return 0;
+} 
+
+bool isPalindrome(int x){
+    int y=0, temp=x;
+    if(x<0){
+    	printf("false");
+    	return false;
+	}
+    while(x){
+        y=y*10+x%10;
+        x=x/10;
+    }
+    if(y==temp){
+        printf("true");
+        return true;
+    }
+    else{
+        printf("false");
+        return false;
+    }
+}
+
